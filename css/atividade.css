@@ -271,29 +271,46 @@ body {
    ============================================================== */
 
 /* ---- Mobile (até 480px) ---- */
-@media (max-width: var(--bp-mobile)) {
+@media (max-width: 480px) {
     :root {
-        --espaco-base: 0.8rem;      /* reduz espaçamento geral */
+        --espaco-base: 0.8rem;
     }
-    .topo { padding: calc(var(--espaco-base) * 0.5); }
-    .botoes-topo { gap: calc(var(--espaco-base) * 0.4); }
-    .paleta { gap: calc(var(--espaco-base) * 0.3); }
+
+    .topo {
+        padding: calc(var(--espaco-base) * 0.5);
+    }
+
+    .botoes-topo {
+        gap: calc(var(--espaco-base) * 0.4);
+    }
+
+    .paleta {
+        gap: calc(var(--espaco-base) * 0.3);
+    }
 }
 
 /* ---- Tablet (481px – 768px) ---- */
-@media (min-width: 481px) and (max-width: var(--bp-tablet)) {
+@media (min-width: 481px) and (max-width: 768px) {
     :root {
         --espaco-base: 0.9rem;
     }
-    .topo { padding: calc(var(--espaco-base) * 0.6); }
-    .botoes-topo { gap: calc((var(--espaco-base) * 0.5)); }
+
+    .topo {
+        padding: calc(var(--espaco-base) * 0.6);
+    }
+
+    .botoes-topo {
+        gap: calc(var(--espaco-base) * 0.5);
+    }
 }
 
-/* ---- Desktop (acima de 768px) ---- */
+/* ---- Desktop (769px para cima) ---- */
 @media (min-width: 769px) {
     :root {
-        --espaco-base: 1rem;      /* valor padrão já definido acima */
+        --espaco-base: 1rem;
     }
-    /* opcional: aumentar um pouco a largura máxima da grade */
-    .grade { max-width: 800px; }
+
+    .grade {
+        max-width: 800px;
+    }
 }
