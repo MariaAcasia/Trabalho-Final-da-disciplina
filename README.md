@@ -1,2 +1,2 @@
-# Trabalho-Final-da-disciplina
-Começo do trabalho final da disciplina de programação I
+# Trabalho Final - Portfólio e Atividade Educativa
+Feito com HTML, CSS e JavaScript
