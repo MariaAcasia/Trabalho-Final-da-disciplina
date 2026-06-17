@@ -100,7 +100,7 @@ function mostrar(){
     let d = desafios[rodada];
 
     document.getElementById("desafio").innerHTML =
-    `🎯 Pinte a posição <b>${d.pos}</b> com a cor correta`;
+    `🎯 Pinte a posição <b>${d.pos}</b> `;
 
     document.getElementById("pontos").innerText = pontos;
     document.getElementById("rodada").innerText = `${rodada+1}/5`;
