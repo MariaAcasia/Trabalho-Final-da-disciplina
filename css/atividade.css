@@ -1,0 +1,292 @@
+:root {
+    
+    --cor-fundo:      #eef3ff;        
+    --cor-topo:       #4a148c;        
+    --cor-texto:      #222;
+    --cor-borda:      #000;
+    --cor-botao:      #fff;
+    --cor-botao-hover:#e0e0e0;
+    --cor-botao-act:  #d1c4e9;        
+    --cor-acerto:     #2e7d32;
+    --cor-erro:       #c62828;
+    --cor-feedback-bg:#fff8e1;        
+    
+    --espaco-base:    1rem;           
+
+    
+    --raio-btn:       8px;
+    --raio-card:      12px;
+    --sombra-leve:    0 2px 6px rgba(0,0,0,0.1);
+    --sombra-forte:   0 4px 12px rgba(0,0,0,0.15);
+
+    
+    --bp-mobile:      480px;   
+    --bp-tablet:      768px;   
+    --bp-desktop:    1024px;   
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html { font-size: 100%; }               
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.topo {
+    background: var(--cor-topo);
+    color: #fff;
+    padding: calc(var(--espaco-base) * 0.75);
+    box-shadow: var(--sombra-leve);
+}
+.titulo-jogo {
+    margin: 0;
+    font-size: clamp(1.5rem, 4vw, 2.2rem); 
+}
+.botoes-topo {
+    display: flex;
+    gap: var(--espaco-base);
+    justify-content: center;
+    margin-top: calc(var(--espaco-base) * 0.5);
+    flex-wrap: wrap;
+}
+
+
+.botoes-topo button,
+.botao-voltar,
+.botao-reiniciar {
+    padding: calc(var(--espaco-base) * 0.5) calc(var(--espaco-base) * 0.75);
+    border: none;
+    border-radius: var(--raio-btn);
+    background: var(--cor-botao);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    transition: background .2s ease, transform .1s ease, box-shadow .2s ease;
+    box-shadow: var(--sombra-leve);
+}
+.botoes-topo button:hover,
+.botao-voltar:hover,
+.botao-reiniciar:hover {
+    background: var(--cor-botao-hover);
+    transform: translateY(-2px);
+}
+.botoes-topo button:active,
+.botao-voltar:active,
+.botao-reiniciar:active {
+    transform: translateY(0);
+}
+
+
+.botao-voltar {
+    background: #fff3e0;   
+    color: #ef6c00;
+}
+.botao-voltar:hover {
+    background: #ffe0b2;
+}
+
+
+.botao-reiniciar {
+    background: var(--cor-botao-act);
+    color: #4a148c;
+}
+.botao-reiniciar:hover {
+    background: #b39ddb;
+}
+
+
+.painel {
+    margin: var(--espaco-base) auto;
+    max-width: 90%;
+    font-weight: 600;
+}
+
+
+.desafio {
+    font-size: clamp(1.125rem, 3.5vw, 1.75rem);
+    font-weight: 700;
+    margin: var(--espaco-base) 0;
+    color: var(--cor-texto);
+}
+
+
+.feedback {
+    margin: var(--espaco-base) 0;
+    font-size: clamp(1rem, 2.8vw, 1.25rem);
+    font-weight: 600;
+    min-height: calc(var(--espaco-base) * 1.2);
+    background: var(--cor-feedback-bg);
+    border-radius: var(--raio-btn);
+    padding: calc(var(--espaco-base) * 0.4) calc(var(--espaco-base) * 0.6);
+    display: inline-block;
+    animation: fadeIn .2s ease-out;
+}
+.acerto { color: var(--cor-acerto); }
+.erro   { color: var(--cor-erro); }
+@keyframes fadeIn {
+    from { opacity:0; transform:translateY(-4px); }
+    to   { opacity:1; transform:translateY(0); }
+}
+
+
+.paleta {
+    display: flex;
+    justify-content: center;
+    gap: calc(var(--espaco-base) * 0.5);
+    margin: var(--espaco-base) 0;
+    flex-wrap: wrap;
+}
+.cor {
+    width: clamp(24px, 6vw, 40px);
+    height: clamp(24px, 6vw, 40px);
+    border-radius: 50%;
+    border: 2px solid var(--cor-borda);
+    cursor: pointer;
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+.cor:hover {
+    transform: scale(1.1);
+    box-shadow: var(--sombra-leve);
+}
+.cor.ativa {
+    transform: scale(1.25);
+    box-shadow: 0 0 0 3px var(--cor-borda);
+}
+
+
+.grade {
+    margin: var(--espaco-base) auto;
+    border-collapse: separate;
+    border-spacing: calc(var(--espaco-base) * 0.5);
+    max-width: 90%;
+}
+.grade th {
+    background: var(--cor-topo);
+    color: #fff;
+    padding: calc(var(--espaco-base) * 0.4);
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    border-radius: var(--raio-btn) var(--raio-btn) 0 0;
+}
+.grade td {
+    width: clamp(60px, 18vw, 100px);
+    height: clamp(60px, 18vw, 100px);
+    border: 2px solid var(--cor-borda);
+    border-radius: var(--raio-card);
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    background: #fff;
+    cursor: pointer;
+    transition: transform .15s ease, background .2s ease, box-shadow .2s ease;
+    position: relative;
+    overflow: hidden;
+}
+.grade td:hover {
+    transform: scale(1.04);
+    background: #f9f9f9;
+}
+.grade td:active {
+    transform: scale(0.98);
+}
+
+
+.grade td.pintada   { background: rgba(0,0,0,0.08); }
+.grade td.errou    { animation: shake .3s ease; }
+@keyframes shake {
+    0%,100%{transform:translateX(0);}
+    25%    {transform:translateX(-4px);}
+    50%    {transform:translateX(4px);}
+    75%    {transform:translateX(-4px);}
+}
+
+
+.emoji {
+    display: inline-block;
+    line-height: 1;
+}
+
+
+.final {
+    margin: var(--espaco-base) auto;
+    padding: calc(var(--espaco-base) * 1.5);
+    max-width: 90%;
+    background: #fff;
+    border: 2px solid var(--cor-borda);
+    border-radius: var(--raio-card);
+    box-shadow: var(--sombra-forte);
+    text-align: left;
+}
+.final h2 {
+    margin-top: 0;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    color: var(--cor-topo);
+}
+.final p {
+    margin: calc(var(--espaco-base) * 0.75) 0;
+    font-size: clamp(0.95rem, 2.8vw, 1.1rem);
+    line-height: 1.4;
+}
+.final .emoji-final {
+    font-size: clamp(3rem, 8vw, 5rem);
+    text-align: center;
+    margin-bottom: calc(var(--espaco-base) * 0.5);
+}
+
+
+.hidden { display: none !important; }
+
+
+
+@media (max-width: 480px) {
+    :root {
+        --espaco-base: 0.8rem;
+    }
+
+    .topo {
+        padding: calc(var(--espaco-base) * 0.5);
+    }
+
+    .botoes-topo {
+        gap: calc(var(--espaco-base) * 0.4);
+    }
+
+    .paleta {
+        gap: calc(var(--espaco-base) * 0.3);
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    :root {
+        --espaco-base: 0.9rem;
+    }
+
+    .topo {
+        padding: calc(var(--espaco-base) * 0.6);
+    }
+
+    .botoes-topo {
+        gap: calc(var(--espaco-base) * 0.5);
+    }
+}
+
+@media (min-width: 769px) {
+    :root {
+        --espaco-base: 1rem;
+    }
+
+    .grade {
+        max-width: 800px;
+    }
+}

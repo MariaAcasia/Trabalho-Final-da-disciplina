@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Maria Eduarda Acásia Maciel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">M.A<span>.</span></div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="atividade.html">Atividade</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    
+    <section id="home" class="home">
+        <div class="home-content">
+            <h1>Olá, eu sou <span class="destaque">Maria E .Acásia</span></h1>
+            <p>Estudante de Análise e Desenvolvimento de Sistemas e programadora iniciante.</p>
+            <a href="#contato" class="btn">Entre em Contato</a>
+        </div>
+        <div class="home-img">
+            <img src="img/logotipo.png" alt="Logotipo" class="logotipo">
+        </div>
+    </section>
+
+    
+    <section id="sobre" class="sobre">
+        <h2 class="titulo-secao">Sobre Mim</h2>
+        <div class="sobre-content">
+            <div class="sobre-texto">
+                <p>Sou estudante de programação e estou aprendendo a desenvolver sites e jogos interativos com HTML, CSS
+                    e JavaScript. Gosto de criar projetos simples que me ajudam a entender melhor como a lógica funciona
+                    na prática e como o código pode se transformar em algo visual e divertido. Estou em constante
+                    aprendizado, buscando melhorar minhas habilidades e explorar novas ideias na área da tecnologia.</p>
+                <div class="habilidades">
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Python</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section id="projetos" class="projetos">
+        <h2 class="titulo-secao">Projetos</h2>
+        <div class="projetos-grid">
+            <div class="projeto-card">
+                <div class="projeto-img projeto-1"></div>
+                <h3>Site Pessoal</h3>
+                <p>Meu portfólio online para mostrar meus projetos e habilidades.</p>
+            </div>
+
+
+            <div class="projeto-card">
+                <div class="projeto-img projeto-4"></div>
+                <h3>Atividade Educativa</h3>
+                <p>Atividade educacional de posição e localização.</p>
+                <a href="atividade.html" class="btn btn-projeto">Acessar Atividade</a>
+            </div>
+            <div class="projeto-card">
+                <div class="projeto-img projeto-3"></div>
+                <h3>Em breve</h3>
+                <p>Novos projetos em desenvolvimento.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+    <section id="contato" class="contato">
+        <h2 class="titulo-secao">Entre em Contato</h2>
+        <p>Preencha o formulário abaixo e entrarei em contato em breve.</p>
+
+        <form id="contatoForm" class="form-contato" novalidate>
+            <div class="form-grupo">
+                <label for="nome">Nome Completo *</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
+                <span class="erro" id="erroNome"></span>
+            </div>
+
+            <div class="form-grupo">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com">
+                <span class="erro" id="erroEmail"></span>
+            </div>
+
+
+            <div class="form-grupo">
+                <label for="telefone">Telefone *</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="11999999999">
+                <span class="erro" id="erroTelefone"></span>
+            </div>
+
+            <div class="form-grupo">
+                <label for="assunto">Assunto *</label>
+                <select id="assunto" name="assunto">
+                    <option value="">Selecione um assunto</option>
+                    <option value="orcamento">Orçamento</option>
+                    <option value="parceria">Parceria</option>
+                    <option value="duvida">Dúvida</option>
+                    <option value="outro">Outro</option>
+                </select>
+                <span class="erro" id="erroAssunto"></span>
+            </div>
+
+
+            <div class="form-grupo">
+                <label for="mensagem">Mensagem *</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..."></textarea>
+                <span class="erro" id="erroMensagem"></span>
+            </div>
+
+            <button type="submit" class="btn btn-submit">Enviar Mensagem</button>
+            <div id="sucessoForm" class="sucesso-msg"></div>
+        </form>
+    </section>
+
+    
+    <footer>
+        <p>&copy; 2026 Maria E .Acásia.</p>
+        <div class="redes-sociais">
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a href="#" aria-label="GitHub">GitHub</a>
+            <a href="#" aria-label="Instagram">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

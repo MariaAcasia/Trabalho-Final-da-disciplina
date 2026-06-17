@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo das Posições</title>
+    <link rel="stylesheet" href="css/atividade.css">
+</head>
+
+<body>
+
+    <header class="topo">
+        <h1>🎯 Jogo das Posições</h1>
+        <p>Escolha a cor e encontre a posição correta!</p>
+    </header>
+
+    <main class="container">
+
+       
+        <div class="painel">
+            ⭐ Pontos: <span id="pontos">0</span> |
+            🎮 Rodada: <span id="rodada">1/5</span>
+        </div>
+
+        
+        <div class="desafio" id="desafio">Carregando...</div>
+
+        
+        <div class="paleta" id="cores"></div>
+
+        <!-- GRADE -->
+        <table class="grade">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                </tr>
+            </thead>
+            <tbody id="grade"></tbody>
+        </table>
+        
+        <div class="botoes">
+            <button class="botao-reiniciar" onclick="reiniciarJogo()">🔄 Reiniciar</button>
+            <button class="botao-voltar" onclick="window.location.href='index.html'">🏠 Início</button>
+        </div>
+
+
+        
+        <div id="feedback" class="feedback"></div>
+
+        
+        
+        <div id="final" class="final hidden">
+            <h2 id="tituloFinal">Fim!</h2>
+            <p id="textoFinal"></p>
+        </div>
+
+    </main>
+
+    <script src="js/atividade.js"></script>
+</body>
+
+</html>
